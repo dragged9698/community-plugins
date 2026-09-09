@@ -14,7 +14,7 @@ Replaces the sparse stock media OSD **for Cider only**. Other players keep Nocta
 
 ## Requirements
 
-- Noctalia v5.0.1+ (`plugin_api` 30 — OSD panel `layer = "overlay"`). Tested on Umbriel; Niri and Hyprland keep left-click = lyrics HUD.
+- Noctalia v5.0.0-beta.9+ (`plugin_api` 24 — argv `runAsync`). Tested on Umbriel 0.1.0 / Noctalia v5.0.1; Niri and Hyprland keep left-click = lyrics HUD.
 - Cider with Connectivity / External API enabled
 - `python3` on `PATH`, with `python-socketio`, `requests`, and `websocket-client` (`pip install -r requirements.txt` from this plugin directory)
 - Overlay HUD: `gtk3`, `gtk-layer-shell`, and `python-gobject`. Untimed silence gate optionally uses `parec` (PulseAudio / PipeWire).
@@ -52,7 +52,7 @@ media = false
 noctalia msg panel-toggle dragged/cider:osd
 ```
 
-`osd` is the now-playing card (also opened automatically on track change when **Track alert** is OSD). It is a persistent floating panel on the overlay layer so it sits with other OSDs, not under them. Lyrics always use the gtk-layer-shell overlay. On 5.0.1 the host also injects Attached/Floating/Layer/Open Near Click overrides under **Settings → Plugins** (gear on this plugin).
+`osd` is the now-playing card (also opened automatically on track change when **Track alert** is OSD). It is a persistent floating panel. Lyrics always use the gtk-layer-shell overlay. On 5.0.1 the host also injects Attached/Floating/Layer/Open Near Click overrides under **Settings → Plugins** (gear on this plugin).
 
 Cider’s MPRIS has no synced lyrics. The bridge pulls Apple Music TTML via Cider’s amapi (LRCLIB fallback) for the sticky HUD.
 

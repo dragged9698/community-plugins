@@ -433,7 +433,7 @@ class OverlayLauncherContractTests(unittest.TestCase):
     def test_service_uses_runasync_argv_for_process_launches(self) -> None:
         service = Path(__file__).resolve().parent.parent / "service.luau"
         text = service.read_text(encoding="utf-8")
-        self.assertIn("plugin_api = 30", (Path(__file__).resolve().parent.parent / "plugin.toml").read_text(encoding="utf-8"))
+        self.assertIn("plugin_api = 24", (Path(__file__).resolve().parent.parent / "plugin.toml").read_text(encoding="utf-8"))
         self.assertIn('runArgv({ "python3", script })', text)
         self.assertIn('runArgv({ "python3", script, "--toggle-loft" })', text)
         self.assertIn('runArgv({ "bash", launcher, baseUrl })', text)

@@ -8,7 +8,7 @@
 id = "dragged/cider"
 name = "Cider"
 version = "1.10.0"
-plugin_api = 30
+plugin_api = 24
 author = "dragged"
 license = "MIT"
 dependencies = ["python3", "gtk3", "gtk-layer-shell", "python-gobject"]
@@ -235,8 +235,6 @@ width = 400
 height = 148
 placement = "floating"
 position = "top_right"
-# API 30: overlay so the toast sits with shell OSDs, not under top-layer surfaces.
-layer = "overlay"
 persistent = true
 keyboard_focus = "none"
 dismiss_on_outside_click = false
